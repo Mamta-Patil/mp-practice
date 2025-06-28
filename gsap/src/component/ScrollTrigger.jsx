@@ -165,36 +165,41 @@
 
 
 
-"use client"
-import React from "react"
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-gsap.registerPlugin(ScrollTrigger)
+"use client";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 
-const ToggleActionsEffect = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const ScrollToggleAnimation = () => {
   useGSAP(() => {
-    gsap.to(".box1", {
-      scrollTrigger: {
-        trigger: ".box1",
-        start: "top 80%",
-        end: "top 40%",
-        toggleActions: "play pause resume reverse", // ✅ Now works
-        markers: true
-      },
-    //   x: 300,
-      y: 200,
+    const tl = gsap.timeline({ paused: true }); // 🛑 animation won't auto play
+
+    tl.to(".box", {
+      x: 300,
+      rotation: 360,
       duration: 2,
-    })
-  }, [])
+      ease: "power2.inOut",
+    });
+
+    ScrollTrigger.create({
+      trigger: ".box",
+      start: "center center",
+      end: "bottom top",
+      toggleActions: "play pause resume reverse", // 🎯 this is now working
+      animation: tl,
+      markers: true, // ✅ shows where scroll starts/ends
+    });
+  }, []);
 
   return (
-    <div className="min-h-[200vh] px-6 py-20 bg-gray-100">
-      <h2 className="text-center text-3xl font-bold mb-32">Scroll to See toggleActions</h2>
-      <div className="box1 h-24 w-24 bg-blue-500 rounded-lg mx-auto"></div>
+    <div className="flex justify-center items-center min-h-screen bg-white">
+      <div className="box w-24 h-24 bg-blue-600 rounded-lg" />
     </div>
-  )
-}
+  );
+};
 
-export default ToggleActionsEffect
+export default ScrollToggleAnimation;

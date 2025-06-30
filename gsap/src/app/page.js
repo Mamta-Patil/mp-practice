@@ -15,6 +15,17 @@ import ToggleActionsWorking from "@/component/ScrollTrigger";
 import ScrollScrub from "@/component/ScrollTrigger";
 import ScrollReveal from "@/component/ScrollTrigger";
 import ScrollTriggerExample from "@/component/ScrollTrigger";
+import LogoSpin from "@/component/Logo";
+import ImageReveal from "@/component/image";
+import FadeInOnScroll from "@/component/fadeonscroll";
+import StaggeredCards from "@/component/fadeonscroll";
+import PinnedSection from "@/component/fadeonscroll";
+import ColorChangeOnScroll from "@/component/ColorChangeOnScroll ";
+import TextAnimation from "@/component/Text";
+import MorphText from "@/component/MorphText";
+import DiagonalText from "@/component/MorphText";
+import FlipImage from "@/component/FlipImage";
+import FlipImageOnHover from "@/component/FlipImage";
 
 export default function Home() {
   return (
@@ -30,7 +41,17 @@ export default function Home() {
       {/* <ToggleActionsPlayPause/> */}
       {/* <ToggleActionsWorking  /> */}
       {/* <GSAPText /> */}
-    
+    {/* <LogoSpin /> */}
+    {/* <ImageReveal /> */}
+    {/* <FadeInOnScroll /> */}
+    {/* <StaggeredCards /> */}
+    {/* <PinnedSection /> */}
+    {/* <ColorChangeOnScroll /> */}
+    {/* <TextAnimation /> */}
+    {/* <MorphText /> */}
+    {/* <DiagonalText /> */}
+    {/* <FlipImage /> */}
+    <FlipImageOnHover />
     </div>
   );
 }

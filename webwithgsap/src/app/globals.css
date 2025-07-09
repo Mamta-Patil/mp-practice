@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+@keyframes seamlessScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.seamless-scroll-wrapper {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: seamlessScroll 20s linear infinite;
+}

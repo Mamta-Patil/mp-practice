@@ -1,17 +1,3 @@
-// import React from "react";
-
-// const Video = () => {
-//   return (
-//     <div className="p-10">
-//       <video width="640" height="360" controls preload="none" className="w-full h-auto " autoPlay muted loop >
-//         <source src="/videos/video.mp4" type="video/mp4" />
-//         Your browser does not support the video tag.
-//       </video>
-//     </div>
-//   );
-// };
-
-// export default Video;
 "use client";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";

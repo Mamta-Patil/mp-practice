@@ -1,29 +1,3 @@
-// import Image from 'next/image'
-// import React from 'react'
-// import images from "../../public/images/images.svg";
-// const Card = () => {
-//     return (
-//         <div className='grid grid-cols-3 px-20 gap-10'>
-
-//             <div className='bg-black rounded-3xl p-6'>
-//                 <Image src={images} alt="Logo" />
-//                 <div className='text-white pt-40 pb-10 text-2xl'>Empowering Creators.</div>
-//             </div>
-//             <div className='bg-black rounded-3xl p-6'>
-//                 <Image src={images} alt="Logo" />
-//                 <div className='text-white pt-40 pb-10 text-2xl'>Empowering Creators.</div>
-//             </div>
-//             <div className='bg-black rounded-3xl p-6'>
-//                 <Image src={images} alt="Logo" />
-//                 <div className='text-white pt-40 pb-10 text-2xl'>Empowering Creators.</div>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Card
-
-
 "use client";
 import React from "react";
 import { useGSAP } from "@gsap/react";

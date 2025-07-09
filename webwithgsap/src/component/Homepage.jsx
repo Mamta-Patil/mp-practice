@@ -12,22 +12,8 @@ const HomePage = () => {
   const arrowRef = useRef(null);
   const cursorRef = useRef(null);
 
-  // Cursor position tracking
-  // useEffect(() => {
-  //   const moveCursor = (e) => {
-  //     gsap.to(cursorRef.current, {
-  //       x: e.clientX - 15,
-  //       y: e.clientY - 15,
-  //       duration: 0.2,
-  //       ease: "power2.out",
-  //     });
-  //   };
-  //   window.addEventListener("mousemove", moveCursor);
-  //   return () => window.removeEventListener("mousemove", moveCursor);
-  // }, []);
-
-
   useEffect(() => {
+
   const moveCursor = (e) => {
     gsap.to(cursorRef.current, {
       x: e.clientX - 15,
@@ -39,8 +25,6 @@ const HomePage = () => {
   window.addEventListener("mousemove", moveCursor);
   return () => window.removeEventListener("mousemove", moveCursor);
 }, []);
-
-
 
   // Text and arrow animation
   useEffect(() => {
@@ -56,6 +40,9 @@ const HomePage = () => {
       }
     );
 
+
+
+
     gsap.to(arrowRef.current, {
       y: -20,
       duration: 1,
@@ -63,13 +50,15 @@ const HomePage = () => {
       repeat: -1,
       ease: "power1.inOut",
     });
+
+
   }, []);
 
   return (
     <div className="relative overflow-hidden">
       <div
         ref={cursorRef}
-        className="w-96 h-96 bg-yellow-300 fixed pointer-events-none z-50 rounded-full opacity-60 blur-3xl"
+        className="w-96 h-96 bg-yellow-300 fixed pointer-events-none -z-50 rounded-full opacity-60 blur-3xl"
         style={{ left: 0, top: 0 }}
       ></div>
 
@@ -106,6 +95,7 @@ const HomePage = () => {
           <Image src={downarrow} alt="Down Arrow" />
         </div>
       </div>
+
     </div>
   );
 };
